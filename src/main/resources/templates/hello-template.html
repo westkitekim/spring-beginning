@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<!--
+p 태그 내부의 내용인 hello! empty 는 없어도 된다
+thymeleaf 장점: 1. hello-template.html 파일 자체를 열 수 있다 (copy - Absolute path),
+               2. html 을 그대로 쓰고, 그 파일을 서버 없이 열어봐도 껍데기를 볼 수 있다.
+               템플릿 엔진으로 작동을 하면,
+               아래 p태그의 경우 'hello ' + ${name} 값으로 hello! empty 코드가 치환된다.
+
+               서버 돌리면 'hello ' + ${name} 이 코드가 실행됨
+
+-->
+<p th:text="'hello ' + ${name}">hello! empty</p>
+</body>
+</html>
